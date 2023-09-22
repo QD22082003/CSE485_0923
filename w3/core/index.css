@@ -1,0 +1,159 @@
+#blockMenu{
+    border-radius: 0 50px 50px 0;
+}
+
+#logo{
+    margin-top: 10px;
+}
+
+#logo>a>img{
+    margin-left: 5px;
+}
+
+.menuleft{
+    max-height: calc(100vh);
+    overflow-y: auto;
+    margin-top: 20px;
+}
+.menu-button {
+    width: 100%;
+    text-align: left;
+    height: 60px;
+    position: relative;
+}
+.menuleft>button{
+    height: 80px;
+    border-radius: 10px;
+}
+
+
+
+
+.menuleft>button>a{
+    color: #747B8A;
+    font-weight: bold;
+}
+
+.menuleft>button>a:hover{
+    color: #FF6A59;
+
+}
+
+.menu-button i.fa-lg {
+    position: absolute;
+    left: 10px; /* Điều chỉnh khoảng cách từ biểu tượng trái */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.menu-button .text-decoration-none {
+    margin: 0 30px; /* Điều chỉnh khoảng cách giữa biểu tượng và văn bản */
+}
+
+.menu-button i.fa-solid {
+    position: absolute;
+    right: 10px; /* Điều chỉnh khoảng cách từ biểu tượng phải */
+    top: 50%;
+    transform: translateY(-50%);
+}
+i{
+    color: #FF6A59;
+}
+.menu-button.active-menu {
+    background-color: #FF6A59;
+
+}
+.menu-button>i.white-text-active {
+    color: #FFFFFF;
+}
+.menu-button>a.white-text-active {
+    color: #FFFFFF;
+}
+.fa-caret-right{
+    color: #C8C8C8;
+}
+.menuCon>ul>li{
+    border: none;
+}
+.menuCon>ul>li>a{
+    color:#777B8A;
+}
+.menuCon>ul>li>a:hover{
+    color:#FF6A59;
+}
+    /*.navLeftDiv{*/
+/*    height: 70px;*/
+/*    border-radius: 15px;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.navLeftDiv{*/
+
+/*}*/
+
+/*.navLeftDiv:hover{*/
+/*    color: #FF6A59;*/
+/*}*/
+/*.navLeftDiv>a:hover{*/
+/*    color: #FF6A59;*/
+/*}*/
+
+/*#right{*/
+/*    position: absolute;*/
+/*    right: 10px;*/
+/*    color: #C8C8C8;*/
+/*}*/
+
+
+
+/*#menuCon{*/
+/*    display: none;*/
+/*}*/
+
+body{
+    background-color: #E3EAE8;
+}
+
+#header{
+    border-bottom: 1px solid white; /* Tạo viền dưới với màu trắng và độ dài 90% */
+    width: 95%; /* Chiều rộng 90% */
+    margin: 0 auto; /* Căn giữa header */
+    padding-bottom: 5px;
+}
+
+#header>div{
+    width: 25%;
+    margin-left: 35%;
+    margin-top: 10px;
+
+}
+
+#header>i{
+
+    color: black;
+}
+
+#header>h1{
+    margin-left: 10%;
+}
+#button-addon1{
+    background-color: #FFFFFF;
+    border: #FFFFFF;
+}
+
+/*!*#menuCon>li>a{*!*/
+/*!*    color: #757D8D;*!*/
+/*!*    margin-left: 10px;*!*/
+/*!*}*!*/
+
+/*#menuCon>li>a:hover{*/
+/*    color: #FF6A59;*/
+
+/*}*/
+/*#menuCon>li>a>i{*/
+/*    padding-right: 5px;*/
+/*}*/
+/*.nav-item:hover i {*/
+/*    width: 2em; !* Điều chỉnh kích thước icon khi hover *!*/
+/*}*/
+
