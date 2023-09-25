@@ -48,11 +48,6 @@
         include '../path/menuleft.php';
         ?>
         <div class="col-md-9 main ">
-            <?php
-            if(isset($_GET['error'])){
-                echo "<p style='background-color:orange'>{$_GET['error']}</p>";
-            }
-            ?>
             <div class="header d-flex align-items-center" id="header">
                 <i class="fa-solid fa-bars fa-2x"></i>
                 <h1>User</h1>
@@ -62,28 +57,51 @@
                 </div>
             </div>
             <div style="margin-top: 10px">
+                <?php
+                if(isset($_GET['error'])){
+                    echo "<p style='background-color:orange'>{$_GET['error']}</p>";
+                }
+                ?>
+                <h3 class=" text-center text-uppercase">Add a new User</h3>
                 <form action="../path/process_user_add.php" method="post">
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                        <input name="fullname" id="inputtFullname" type="text" class="form-control" placeholder="fullname" aria-label="fullname" aria-describedby="basic-addon1">
+                    <div class="row input-group mb-3">
+                        <div class="col-md-4 ">
+                            Username
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text" name="user" id="" class="form-control">
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                        <input name="email" id="inputGmail" type="email" class="form-control" placeholder="gmail: ******@gmail.com" aria-label="gmail" aria-describedby="basic-addon1">
+                    <div class="row input-group mb-3">
+                        <div class="col-md-4 ">
+                            Email
+                        </div>
+                        <div class="col-md-8">
+                            <input type="email" name="mail" id="" class="form-control">
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                        <input name="password" id="inputPassword" type="password" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon1">
+                    <div class="row input-group mb-3">
+                        <div class="col-md-4 ">
+                            Password
+                        </div>
+                        <div class="col-md-8">
+                            <input type="password" name="pass1" id="" class="form-control">
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                        <input name="password2" id="inputPassword" type="password" class="form-control" placeholder="re-type password" aria-label="password" aria-describedby="basic-addon1">
+                    <div class="row input-group mb-3">
+                        <div class="col-md-4 ">
+                            Re-type Password
+                        </div>
+                        <div class="col-md-8">
+                            <input type="password" name="pass2" id="" class="form-control">
+                        </div>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="basic-addon1">@</span>
-                        <input name="created" id="inputCreate" type="text" class="form-control" placeholder="create. exam: YYYY-mm-DD" aria-label="create" aria-describedby="basic-addon1">
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-8">
+                            <button type="submit" class="btn btn-success" name="sbmSave">Save</button>
+                        </div>
                     </div>
-                    <button type="submit" class="btn btn-outline-primary" name="sbmSave">ADD</button>
                 </form>
 
             </div>

@@ -9,7 +9,7 @@ try{
     //Buoc 1: Ket noi DBServer
     $conn = new PDO("mysql:host=localhost;dbname=cse", "root", "22082003");
     //Buoc 2: Thuc hien truy van
-    $sql = "DELETE FROM user WHERE id = $id";
+    $sql = "DELETE FROM users WHERE userid = $id";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 

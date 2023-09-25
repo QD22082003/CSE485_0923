@@ -1,4 +1,14 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['isLogin'])){
+    header("Location: login.php");
+}
+?>
+
+
+
+<?php
 if(isset($_GET['page'])){
     $page = $_GET['page'];
 }else{
@@ -10,12 +20,12 @@ try{
     $conn = new PDO("mysql:host=localhost;dbname=cse","root","22082003");
     //buoc 2: thuc hien truy van
     $n = ($page -1) * 10;
-    $sql = "SELECT * FROM user ORDER BY id DESC LIMIT 10 OFFSET $n";
+    $sql = "SELECT * FROM users ORDER BY created_at DESC LIMIT 10 OFFSET $n";
     //$conn-> query ($sql)
     $stmt = $conn->prepare($sql);
     $stmt-> execute();
     //buoc3: Xu li ket qua
-    $user = $stmt->fetchAll();
+    $users = $stmt->fetchAll();
 
 }catch (PDOException $e){
     echo "ERRor: ".$e->getMessage();
@@ -140,21 +150,19 @@ try{
                                 <thead>
                                 <tr>
                                     <th scope="col">id</th>
-                                    <th scope="col">Fullname</th>
+                                    <th scope="col">Username</th>
                                     <th scope="col">Email</th>
                                     <th scope="col">Password</th>
-                                    <th scope="col">Created</th>
                                     <th scope="col">Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($user as $user){ ?>
+                                <?php foreach ($users as $user){ ?>
                                     <tr>
                                         <th scope="row"><?= $user['0'] ?></th>
                                         <td><?= $user['1']?></td>
                                         <td><?= $user['2']?></td>
                                         <td><?= $user['3']?></td>
-                                        <td><?= $user['4']?></td>
                                         <td style="display: flex; justify-content: space-between; height: 100%;padding-top: 20%">
                                             <a><div class="square" style="background-color: greenyellow"><i class="fa-solid fa-shield-halved" style="color: #FFFFFF" ></i></div></a>
                                             <a><div class="square" style="background-color: #FF6A59"><i class="fa-solid fa-pen" style="color: #FFFFFF"></i></div></a>

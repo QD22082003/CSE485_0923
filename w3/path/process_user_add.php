@@ -1,11 +1,9 @@
 <?php
-
-
 if(isset($_POST['sbmSave'])){
-    $fullname = $_POST['fullname'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $created = $_POST['created'];
+    $user = $_POST['user'];
+    $email = $_POST['mail'];
+    $pass1 = $_POST['pass1'];
+//    $pass2 = $_POST['pass2'];
 
 //    if($pass1 != $pass2){
 //        $error = "Mật khẩu không khớp";
@@ -16,19 +14,20 @@ if(isset($_POST['sbmSave'])){
         //Buoc 1: Ket noi DBServer
         $conn = new PDO("mysql:host=localhost;dbname=cse", "root", "22082003");
         //Buoc 2: Thuc hien truy van
-        $sql_check = "SELECT * FROM user WHERE fullname = '$fullname' OR email='$email'";
+        $sql_check = "SELECT * FROM users WHERE username = '$user' OR email='$email'";
         $stmt = $conn->prepare($sql_check);
         $stmt->execute();
 
         //Buoc 3: Xử lý kết quả
         if($stmt->rowCount()>0){
-            header("location: http://localhost/w3/screens/user.php?error=existed");
+            header("Location:http://test.vn/w3/screens/process_adduser.php?error=existed");
         }else{
-            $sql_insert = "INSERT INTO user (fullname, password, email, created) VALUES ('$fullname', '$password', '$email', '$created')";
+            $pass_hash = password_hash($pass1, PASSWORD_DEFAULT);
+            $sql_insert = "INSERT INTO users (username, email, pass) VALUES ('$user', '$email', '$pass_hash')";
             $stmt = $conn->prepare($sql_insert);
             $stmt->execute();
             if($stmt->rowCount() > 0){
-                header("location: http://localhost/w3/screens/user.php?error=added");
+                header("Location:http://test.vn/w3/screens/process_adduser.php?error=added");
             }
         }
 
