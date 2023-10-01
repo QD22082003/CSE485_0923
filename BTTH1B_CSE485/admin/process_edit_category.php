@@ -5,7 +5,7 @@ if(isset($_POST['sbmSave'])){
 
     try{
         //Buoc 1: Ket noi DBServer
-        $conn = new PDO("mysql:host=localhost;dbname=cse", "root", "22082003");
+        $conn = new PDO("mysql:host=localhost;dbname=btth01_cse485", "root", "22082003");
         //Buoc 2: Thuc hien truy van
         
         $sql = "UPDATE theloai SET ten_tloai = '$ten_tloai'

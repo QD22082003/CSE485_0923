@@ -6,9 +6,9 @@
     <title>Trang Đăng Nhập</title>
     <!-- Sử dụng Bootstrap CSS -->
     <link href="../icon/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../w3/icon/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../w3/icon/fontawesome-free-6.4.0-web/css/all.min.css">
-    <link rel="stylesheet" href="../../w3/icon/node_modules/bootstrap-icons/icons">
+    <link rel="stylesheet" href="..bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="..fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="..node_modules/bootstrap-icons/icons">
 </head>
 <body style="background-color: #f0f0f0">
 <?php

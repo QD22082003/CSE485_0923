@@ -2,12 +2,12 @@
 if (isset($_GET['admin'])) {
     try {
         //Buoc 1: Mo ket noi
-        $conn = new PDO("mysql:host=localhost;dbname=cse", "root", "22082003");
+        $conn = new PDO("mysql:host=localhost;dbname=btth01_cse485", "root", "22082003");
         //Buoc 2: Thuc hien truy van
-        $sql = "SELECT * FROM users;";
-        $stmt = $conn->prepare($sql);
-        $stmt->execute();
-        $users = $stmt->rowCount();
+//        $sql = "SELECT * FROM users;";
+//        $stmt = $conn->prepare($sql);
+//        $stmt->execute();
+//        $users = $stmt->rowCount();
 
 
         $sql = "SELECT * FROM theloai;";
@@ -79,12 +79,12 @@ if (isset($_GET['admin'])) {
 
     <div class="content m-5">
         <div class="row mx-5" style="justify-content: space-around;">
-            <div class="card" style="width: 14rem;">
-                <div class="card-body text-center">
-                    <p class="card-text text-primary">Người dùng</p>
-                    <h3><?php echo $users; ?></h3>
-                </div>
-            </div>
+<!--            <div class="card" style="width: 14rem;">-->
+<!--                <div class="card-body text-center">-->
+<!--                    <p class="card-text text-primary">Người dùng</p>-->
+<!--                    <h3>--><?php //echo $users; ?><!--</h3>-->
+<!--                </div>-->
+<!--            </div>-->
 
             <div class="card" style="width: 14rem;">
                 <div class="card-body text-center">

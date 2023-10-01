@@ -4,7 +4,7 @@
 
         try{
             //Buoc 1: Mo ket noi
-            $conn = new PDO("mysql:host=localhost;dbname=cse", "root", "22082003");
+            $conn = new PDO("mysql:host=localhost;dbname=btth01_cse485", "root", "22082003");
             //Buoc 2: Thuc hien truy van
             $sql = "SELECT * FROM theloai WHERE ma_tloai = '$ma_tloai';";
             
