@@ -45,7 +45,12 @@
             <div class="row">
                 <div class="col-4"></div>
                 <div class="col-4">
-                    <form class="p-3" style="background-color: #838383; border-radius: 10px" action="" method="post">
+                    <?php
+                    if(isset($_GET['error'])){
+                        echo "<p>{$_GET['error']}</p>";
+                    }
+                    ?>
+                    <form class="p-3" style="background-color: #838383; border-radius: 10px" action="process_login.php" method="post">
                         <div class="d-flex align-items-center justify-content-between">
                             <h4 class="text-white">Sign In</h4>
                             <div class="d-icon" style="position: relative; top: -2.5rem;">
@@ -55,19 +60,22 @@
                             </div>
                         </div>
                         <div class="border-top border-bottom border-1 border-black p-3">
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
-                                <input type="text" name="user" class="form-control" placeholder="Username">
-                            </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
-                                <input type="password" name="pass" class="form-control" placeholder="Password">
-                            </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label text-white" for="exampleCheck1">Remember me</label>
-                            </div>
-                            <button type="submit" class="btn btn-warning">Login</button>
+
+
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fa-solid fa-user"></i></span>
+                                    <input type="text" name="username" class="form-control" placeholder="Username">
+                                </div>
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text"><i class="fa-solid fa-key"></i></span>
+                                    <input type="password" name="password" class="form-control" placeholder="Password">
+                                </div>
+                                <div class="mb-3 form-check">
+                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                    <label class="form-check-label text-white" for="exampleCheck1">Remember me</label>
+                                </div>
+                                <button type="submit" class="btn btn-warning" name="sbmLogin">Login</button>
+
                         </div>
                         <div class="form-bottom text-center">
                             <p class="m-0">Don't have an account?<a class="text-decoration-none text-warning" href="">Sign Up</a></p>

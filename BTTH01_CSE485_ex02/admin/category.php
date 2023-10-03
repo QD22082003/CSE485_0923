@@ -89,7 +89,7 @@ if (isset($_GET['admin'])) {
                                 <tr>
                                     <th scope="row"><?php echo $tloai['ma_tloai']; ?></th>
                                     <td><?php echo $tloai['ten_tloai']; ?></td>
-                                    <td><a href="edit_category.php"><i class="fa-solid fa-pen-to-square"></i></a></td>
+                                    <td><a href="edit_category.php?id=<?php echo $tloai['ma_tloai']; ?>"><i class="fa-solid fa-pen-to-square"></i></a></td>
                                     <td>
                                         <a href="#" data-bs-toggle="modal" data-bs-target="#modal<?php echo $tloai['0']; ?>">
                                             <i class="fa-solid fa-trash"></i>
