@@ -4425,7 +4425,7 @@ binoculars:
       - magnify
       - scenic
       - spyglass
-      - view
+      - views
   unicode: f1e5
   voted: false
 biohazard:
@@ -31202,7 +31202,7 @@ mountain:
       - snow
       - snow-capped mountain
       - travel
-      - view
+      - views
   unicode: f6fc
   voted: false
 mountain-city:
@@ -31247,7 +31247,7 @@ mountain-sun:
       - landscape
       - rural
       - travel
-      - view
+      - views
   unicode: e52f
   voted: false
 mug-hot:
@@ -45702,7 +45702,7 @@ tower-observation:
   search:
     terms:
       - fire tower
-      - view
+      - views
   unicode: e586
   voted: false
 tractor:

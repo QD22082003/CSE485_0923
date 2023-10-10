@@ -141,7 +141,7 @@ class PHPMailer
      * The plain-text message body.
      * This body can be read by mail clients that do not have HTML email
      * capability such as mutt & Eudora.
-     * Clients that can read HTML will view the normal Body.
+     * Clients that can read HTML will views the normal Body.
      *
      * @var string
      */
@@ -4353,7 +4353,7 @@ class PHPMailer
         $this->Body = static::normalizeBreaks($message);
         $this->AltBody = static::normalizeBreaks($this->html2text($message, $advanced));
         if (!$this->alternativeExists()) {
-            $this->AltBody = 'This is an HTML-only message. To view it, activate HTML in your email application.'
+            $this->AltBody = 'This is an HTML-only message. To views it, activate HTML in your email application.'
                 . static::$LE;
         }
 

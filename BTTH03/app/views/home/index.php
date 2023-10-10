@@ -31,7 +31,7 @@
 <div id="patientList" style="display:block;">
     <!-- Hiển thị danh sách sinh viên ở đây -->
     <h3>Quản lí bệnh nhân</h3>
-    <a class="btn btn-success" href="<?=DOMAIN.'/app/view/patient/add.php';?>" > Thêm mới</a>
+    <a class="btn btn-success" href="<?=DOMAIN.'/app/views/patient/add.php';?>" > Thêm mới</a>
     <table class="table">
         <thead>
         <tr>
@@ -56,7 +56,7 @@
                 <td><?= $patient->getDayExamination();?></td>
                 <td><?= $patient->getSymptom();?></td>
                 <td><?= $patient->getIdDocTor();?></td>
-                <td><a href="<?=DOMAIN.'/app/view/patient/edit.php';?>?id=<?= $patient->getId();?>"><i class="bi bi-pencil-fill"></i></a></td>
+                <td><a href="<?=DOMAIN.'/app/views/patient/edit.php';?>?id=<?= $patient->getId();?>"><i class="bi bi-pencil-fill"></i></a></td>
                 <td><a data-bs-toggle="modal" data-bs-target="#exampleModal<?= $patient->getId();?>"> <i class="bi bi-trash3"></i></a></td>
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal<?= $patient->getId();?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -86,7 +86,7 @@
 
 <div id="doctorList" style="display:none;">
     <h3>Quản lí bệnh nhân</h3>
-<!--    <a class="btn btn-success" href="--><?//=DOMAIN.'/app/view/doctor/add.php';?><!--" > Thêm mới</a>-->
+<!--    <a class="btn btn-success" href="--><?//=DOMAIN.'/app/views/doctor/add.php';?><!--" > Thêm mới</a>-->
     <table class="table">
         <thead>
         <tr>

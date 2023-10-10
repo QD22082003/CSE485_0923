@@ -12,7 +12,7 @@ if(isset($_POST['sbmSave'])){
         $stmt = $conn->prepare($sql_insert);
         $stmt->execute();
         if($stmt->rowCount() > 0){
-            header("Location:http://localhost/OOP/BTTH03/app/view/patient/add.php?error=added");
+            header("Location:http://localhost/OOP/BTTH03/app/views/patient/add.php?error=added");
         }
     }catch(PDOException $e){
         echo $e->getMessage();

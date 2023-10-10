@@ -10,7 +10,7 @@ class HomeController{
 
         $doctorService = new DoctorService();
         $doctor = $doctorService->getAllDoctor();
-        include APP_ROOT.'/app/view/home/index.php';
+        include APP_ROOT.'/app/views/home/index.php';
     }
 //    public function deletePatient(){
 //        $id = isset($_GET['idSelect'])? $_GET['idSelect']:null;

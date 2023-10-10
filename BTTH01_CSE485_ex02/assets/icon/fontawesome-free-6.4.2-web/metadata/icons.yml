@@ -3581,7 +3581,7 @@ binoculars:
       - magnify
       - scenic
       - spyglass
-      - view
+      - views
   styles:
     - solid
   unicode: f1e5
@@ -25249,7 +25249,7 @@ mountain:
       - snow
       - snow-capped mountain
       - travel
-      - view
+      - views
   styles:
     - solid
   unicode: f6fc
@@ -25284,7 +25284,7 @@ mountain-sun:
       - landscape
       - rural
       - travel
-      - view
+      - views
   styles:
     - solid
   unicode: e52f
@@ -36958,7 +36958,7 @@ tower-observation:
   search:
     terms:
       - fire tower
-      - view
+      - views
   styles:
     - solid
   unicode: e586

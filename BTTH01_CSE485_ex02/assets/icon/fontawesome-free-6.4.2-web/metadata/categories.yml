@@ -1829,7 +1829,7 @@ maps:
     - square-phone
     - square-phone-flip
     - square-plus
-    - street-view
+    - street-views
     - suitcase
     - suitcase-medical
     - tag
@@ -2952,7 +2952,7 @@ users-people:
     - restroom
     - skull
     - square-person-confined
-    - street-view
+    - street-views
     - user
     - user-astronaut
     - user-check
