@@ -14,9 +14,9 @@
         </div>
     </div>
     <div class="card-body">
-        @if (session('error'))
+        @if (session('success'))
             <div class="alert alert-danger">
-                {{ session('error') }}
+                {{ session('success') }}
             </div>
         @endif
 
@@ -42,7 +42,7 @@
                     <td>{{$artwork->art_type}}</td>
                     <td>{{$artwork->media_link}}</td>
                     <td><img width="250" height="250" src="{{$artwork->cover_image}}" alt=""></td>
-                    <td><a><i class="fa-solid fa-pen-to-square"></i></a></td>
+                    <td><a href="{{ route('artworks.edit', $artwork)}}"><i class="fa-solid fa-pen-to-square"></i></a></td>
                     <td><a data-bs-toggle="modal" data-bs-target="#exampleModal{{$artwork->id}}"><i class="fa-solid fa-trash" ></i></a></td>
                     <!-- Modal -->
                     <div class="modal fade" id="exampleModal{{$artwork->id}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->enum('art_type', ['art', 'music', 'literature']);
             $table->string('media_link');
             $table->string('cover_image');
+            $table->timestamps();
         });
     }
 

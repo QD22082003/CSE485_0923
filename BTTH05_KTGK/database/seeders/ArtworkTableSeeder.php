@@ -7,7 +7,6 @@ use Illuminate\Database\Seeder;
 use App\Models\Artwork;
 use Faker\Factory as Faker;
 use Illuminate\Support\Facades\DB;
-
 class ArtworkTableSeeder extends Seeder
 {
     /**
@@ -26,7 +25,7 @@ class ArtworkTableSeeder extends Seeder
                 'description' => $faker->text(200),
                 'art_type' => $faker->randomElement(['art', 'music', 'literature']),
                 'media_link' => $faker->url,
-                'cover_image'=>$faker->imageUrl(200,200,'peoples',true),
+                'cover_image' => $faker->imageUrl(200, 200, 'peoples', true),
             ]);
         }
     }

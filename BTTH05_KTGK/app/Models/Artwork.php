@@ -9,5 +9,5 @@ class Artwork extends Model
 {
     protected $fillable = ['artist_name', 'description', 'art_type', 'media_link','cover_image'];
     use HasFactory;
-    public $timestamps = false;
+    public $timestamps = true;
 }

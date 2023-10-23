@@ -40,11 +40,13 @@
                         </div>
                         <div class="form-group">
                             <label for="">Image Cover</label>
+                            @if ($artwork->cover_image)
                             <input type="file" name="cover_image" class="form-control-file" value="{{$artwork->cover_image}}">
+                            @endif
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-success mt-4">Lưu</button>
+                <button type="submit" class="btn btn-success mt-4">Save</button>
             </form>
         </div>
     </div>
